@@ -4,9 +4,63 @@
   <meta charset="utf-8">
   <title>Adam Turner</title>
   <link rel="stylesheet" type="text/css" href="style.css"/>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,500" rel="stylesheet">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="canonical" href="https://adamturner.me/"/>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 </head>
 
 <body>
-
-
+  <div class="main">
+    <div class="menu-button">
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+    <div class="nav">
+      <a id="name" href="">ADAM TURNER</a>
+      <a href="">ABOUT</a>
+      <a href="">EXPERIENCE</a>
+      <a href="">PROJECTS</a>
+      <a href="">PHOTOGRAPHY</a>
+      <a href="">CONTACT</a>
+    </div>
+    <div class="content">
+      <h1>ADAM TURNER</h1>
+      <h2>Currently studying Computing and Digital Technologies<br>in the Bachelor of Design at The University of Melbourne.</h2>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function() {
+      var menu = "close";
+      var x = window.matchMedia("(max-width: 800px)");
+      $(".menu-button").click(function() {
+        if (menu === "close") {
+          	$(this).next(".nav").css("transform", "translate(0, 0)");
+          	$(this).next(".nav").css("transition", "all 0.4s ease-in-out");
+            $(this).children(".line:first").css("transform", "rotate(46deg) translate(5px, 5px)");
+            $(this).children(".line:last").css("transform", "rotate(-45deg) translate(3px, -4px)");
+         	  menu = "open";
+        } else {
+          	$(this).next(".nav").css("transform", "translate(0, -100%)");
+            $(this).children(".line:first").css("transform", "rotate(0deg) translate(0, 0)");
+            $(this).children(".line:last").css("transform", "rotate(0deg) translate(0, 0)");
+          	menu = "close";
+        }
+      });
+      function navType(x) {
+        if (x.matches) {
+          document.querySelector('.nav').style.transform = "translate(0, -100%)";
+          menu = "close";
+        } else {
+          document.querySelector('.nav').style.transform = "translate(0, 0)";
+          document.querySelector('.nav').style.transition = "none";
+          document.getElementsByClassName('line')[0].style.transform = "rotate(0deg) translate(0, 0)";
+          document.getElementsByClassName('line')[1].style.transform = "rotate(0deg) translate(0, 0)";
+          menu = "close";
+        };
+      }
+      navType(x)
+      x.addListener(navType)
+    });
+  </script>
 </body>
