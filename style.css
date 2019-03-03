@@ -444,4 +444,8 @@ html, body{
 
     height: 150px;
   }
+  .pg-header img {
+    width: 90%;
+    max-width: 400px;
+  }
 }
