@@ -333,6 +333,14 @@ html, body{
     transition: none;
     -webkit-transition: none;
   }
+  .content {
+    min-height: none;
+    height: auto;
+  }
+  .content-area {
+    margin-top: 20px;
+    width: 90%;
+  }
   #name {
     margin-top: 4px;
   }
@@ -383,6 +391,7 @@ html, body{
   .block-text {
     margin-left: 0;
     margin-top: 20px;
+    align-items: center;
   }
   .block-content iframe {
     flex-shrink: 0;
