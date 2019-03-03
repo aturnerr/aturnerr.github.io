@@ -65,6 +65,16 @@ html, body{
   font-size: 26px;
 }
 
+.home-social-icons {
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+}
+
+.home-social-icons img {
+  width: 20px;
+}
+
 .content {
   background-color: #f9f9f9;
   margin-top: 80px;
@@ -271,6 +281,8 @@ html, body{
   min-width: 100%;
   vertical-align: bottom;
 }
+
+
 
 @media only screen and (max-width: 1200px) {
   .line {
