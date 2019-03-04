@@ -330,7 +330,7 @@ html, body{
     margin-top:20px;
     padding-bottom: 10px;
     position: fixed;
-    z-index: 2;
+    z-index: 5;
   }
   .nav {
     background-image: none;
@@ -338,7 +338,7 @@ html, body{
     display: flex;
     background-color: rgba(60, 56, 66, 0.8);
     height: 250px;
-    z-index: 1;
+    z-index: 4;
     flex-direction: column;
     justify-content: space-evenly;
     transform: translateY(-100%);
