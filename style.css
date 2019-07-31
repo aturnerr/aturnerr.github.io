@@ -37,6 +37,10 @@ html, body{
   align-items: center;
 }
 
+.index {
+  background-image: none;
+}
+
 #name {
   font-size: 26px;
   font-weight: 200;
