@@ -178,7 +178,8 @@ html, body{
 }
 
 .intro img {
-  margin-left: 150px;
+  margin-left: 50px;
+  margin-top: 20px;
   width: 350px;
   height: 350px;
   border-radius: 50%;
