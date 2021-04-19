@@ -120,18 +120,23 @@ html, body{
 }
 
 .text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   padding-bottom: 100px;
   width: 80%;
   margin-top: 80px;
 }
 
 .text h1 {
+  text-align: center;
   margin-top: 15px;
   font-weight: 500;
   font-size: 50px;
+  margin-bottom: 0.5rem;
 }
 
-#bio {
+#bio-text {
   max-width: 700px;
 }
 
@@ -171,17 +176,26 @@ html, body{
   height: 2px;
 }
 
-.intro {
-  display: flex;
-  justify-content: space-between;
-  align-content: center;
+.line-break-small {
+  background-color: rgba(200,200,200,1);
+  width: 200px;
+  height: 3px;
+  margin-bottom: 1rem;
 }
 
-.intro img {
-  margin-left: 50px;
-  margin-top: 20px;
-  width: 350px;
-  height: 350px;
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hr {
+  border-top: 1px solid black;
+}
+
+.text img {
+  width: 250px;
+  height: auto;
   border-radius: 50%;
 }
 
@@ -305,9 +319,27 @@ html, body{
   vertical-align: bottom;
 }
 
+/* https://jarv.is/notes/css-waving-hand-emoji/ */ 
+.wave {
+  animation-name: wave-animation; 
+  animation-duration: 3s;        
+  animation-iteration-count: 1; 
+  transform-origin: 70% 70%;       /* Pivot around the bottom-left palm */
+  display: inline-block;
+}
 
+@keyframes wave-animation {
+  0% { transform: rotate( 0.0deg) }
+ 10% { transform: rotate(14.0deg) }
+ 20% { transform: rotate(-8.0deg) }
+ 30% { transform: rotate(14.0deg) }
+ 40% { transform: rotate(-4.0deg) }
+ 50% { transform: rotate(10.0deg) }
+ 60% { transform: rotate( 0.0deg) } 
+100% { transform: rotate( 0.0deg) }
+}
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 570px) {
   .line {
     background-color: #fff;
     width: 30px;
@@ -329,14 +361,13 @@ html, body{
     -webkit-transform: rotate(0deg) translate(0, 0);
   }
   .mobile-header {
-    background-image: url('assets/bg.jpg');
+    background-image: url('assets/bg3.jpg');
     background-size: 1920 1080;
     background-repeat: no-repeat;
     background-position: top center;
     position: fixed;
     height: 80px;
     width:100%;
-    background-color: coral;
     z-index: 1;
   }
   .menu-button {
@@ -371,10 +402,12 @@ html, body{
   .content {
     min-height: none;
     height: auto;
+    padding: 0;
   }
   .content-area {
-    margin-top: 20px;
-    width: 90%;
+    margin-top: 0;
+    margin-bottom: 0;
+    width: 100%;
   }
   #name {
     margin-top: 4px;
@@ -391,7 +424,7 @@ html, body{
     flex-direction: column;
     align-items: center;
   }
-  .intro img {
+  .text img {
     margin-top: 15px;
     margin-left: 0px;
     width: 200px;
@@ -415,7 +448,7 @@ html, body{
     font-size: 1.2em;
   }
   .text p {
-    font-size: 1em;
+    font-size: 0.9rem;
   }
   .block-content {
     flex-direction: column;
