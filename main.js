@@ -60,7 +60,7 @@ $(document).ready(function() {
         }
       },
       "opacity": {
-        "value": 1,
+        "value": 0.8,
         "random": true,
         "anim": {
           "enable": true,

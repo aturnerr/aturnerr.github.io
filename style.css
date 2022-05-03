@@ -85,7 +85,7 @@ html, body{
 .home-social-icons {
   display: flex;
   justify-content: space-around;
-  width: 300px;
+  width: 200px;
 }
 
 .home-social-icons img {
